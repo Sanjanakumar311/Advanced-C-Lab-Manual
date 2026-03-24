@@ -1,4 +1,4 @@
-EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
+NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
 Aim:
 To write a C program print the lowercase English word corresponding to the number
 Algorithm:
@@ -15,26 +15,65 @@ Algorithm:
 4.	Exit the program.
  
 Program:
-
-//type your code here
-
-
-
+```
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    switch(n)
+    {
+        case 21:
+        printf("twenty one");
+        break;
+        
+        case 22:
+        printf("twenty two");
+        break;
+        
+        case 23:
+        printf("twenty three");
+        break;
+        
+        case 24:
+        printf("twenty four");
+        break;
+        
+        case 25:
+        printf("twenty five");
+        break;
+        
+        case 26:
+        printf("twenty six");
+        break;
+        
+        case 27:
+        printf("twenty seven");
+        break;
+        
+        case 28:
+        printf("twenty eight");
+        break;
+        
+        case 29:
+        printf("twenty nine");
+        break;
+        
+        default:
+        printf("Greater than 29");
+        break;
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/bb6dd640-7d66-419e-9605-d242a9a3ad4e)
 
 Result:
 Thus, the program is verified successfully
  
-EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
+EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3.
 Aim:
 To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
 Algorithm:
@@ -46,21 +85,35 @@ Algorithm:
 6.	End
  
 Program:
-
-//type your code here
-
-
-
+```
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+    char str[20];
+    scanf("%s",str);
+    int sum=0;
+    for(int j=48;j<=51;j++)
+    {
+        for(int i=0;str[i]!='\0';i++)
+        {
+            if(isdigit(str[i]))
+            {
+                if((int)str[i]==j)
+                {
+                    sum+=1;
+                }
+            }
+        }
+        printf("%d ",sum);
+        sum=0;
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/d6226f37-2b7e-4ce4-a57d-f56520f679bf)
 
 Result:
 Thus, the program is verified successfully
@@ -83,20 +136,44 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
-
-//type your code here
-
-
-
+```
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    char arr[50][50];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",arr[i]);
+    }
+    if(n==2)
+    {
+        printf("%s %s\n",arr[0],arr[1]);
+        printf("%s %s",arr[1],arr[0]);
+    }
+    else
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                for(int k=0;k<n;k++)
+                {
+                    if(i!=j && j!=k && k!=i)
+                    {
+                        printf("%s %s %s\n",arr[i],arr[j],arr[k]);
+                    }
+                }
+            }
+        }
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![image](https://github.com/user-attachments/assets/a5098c71-b8fa-41cd-aab0-8d78da0eb377)
 
 
 Result:
@@ -116,20 +193,31 @@ Algorithm:
 7.	End
  
 Program:
-
-//type your code here
-
-
-
+```
+#include<stdio.h>
+int main()
+{
+    int n,min;
+    scanf("%d",&n);
+    for(int i=0;i<2*n-1;i++)
+    {
+        for(int j=0;j<2*n-1;j++)
+        {
+            min=i;
+            if(j<min)min=j;
+            if((2*n-2-i)<min)min=(2*n-2-i);
+            if((2*n-2-j)<min)min=(2*n-2-j);
+            printf("%d ",n-min);
+        }
+         printf("\n");
+       
+    }
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![image](https://github.com/user-attachments/assets/b2769024-94b7-4007-86d2-7509ddd422fc)
 
 
 Result:
@@ -155,48 +243,28 @@ o	Call the square() function and display the result.
 5.	End.
 
 Program:
+```
+#include <stdio.h>
+int square() 
+{
+    int num;
+    scanf("%d", &num);
+    return num * num;
+}
 
-//type your code here
-
-
-
+int main() 
+{
+    int result;
+    result = square(); 
+    printf("The square of the number is: %d\n", result);
+    return 0;
+}
+```
 
 Output:
 
-
-//paste your output here
-
-
-
-
+![image](https://github.com/user-attachments/assets/a93a0f1d-4e40-4a7f-821e-67f1d1d09cd8)
 
 
 Result:
 Thus, the program is verified successfully
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
